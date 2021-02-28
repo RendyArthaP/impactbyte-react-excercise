@@ -24,6 +24,7 @@ const Login = () => {
     } else if(user.email !== userLogin.email || user.password !== userLogin.password) {
       alert("Email atau password anda salah atau tidak terdaftar")
     } else {
+      localStorage.setItem("isLogin", true)
       alert("Login berhasil")
       history.push("/home")
     }
